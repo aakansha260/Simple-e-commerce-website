@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Circle Logo</title>
+    <style>
+        canvas {
+            border: 3px solid #9a75c2;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="logoCanvas" width="100" height="100"></canvas>
+
+    <script>
+        // Get the canvas element and its context
+        var canvas = document.getElementById('logoCanvas');
+        var ctx = canvas.getContext('2d');
+
+        // Draw a circular background
+        ctx.beginPath();
+        ctx.arc(50, 50, 45, 0, 2 * Math.PI);
+        ctx.fillStyle = '#93528c';
+        ctx.fill();
+        ctx.closePath();
+
+        // Draw the letter "A" in the center
+        ctx.font = '50px Cambria';
+        ctx.fillStyle = '#ffffff';
+        ctx.textAlign = 'center';
+        ctx.fillText('A', 50, 60);
+    </script>
+</body>
+</html>

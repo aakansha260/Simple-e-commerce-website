@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <script>
+
+        function submitForm() {
+            if (validateForm()) {
+                alert('Form is valid. Submitting');
+                window.location.href = "last.html";
+            } else {
+                alert('Form has errors. Recheck and submit.');
+            }
+        }
+
+        function validateForm() {
+            return (
+                validateName('name') &&
+                validateEmail('email') &&
+                validatePhone('phone') &&
+                validateState('state') &&
+                validateZip('zip')
+            );
+        }
+
+        function validateName(nameField) {
+            var name = document.getElementById(nameField).value;
+            if (name.trim() === '') {
+                alert('Please enter Name');
+                return false;
+            }
+            return true;
+        }
+
+        function validateEmail(emailField) {
+            var email = document.getElementById(emailField).value;
+            var emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailReg.test(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+            return true;
+        }
+
+        function validatePhone(phoneField) {
+            var phone = document.getElementById(phoneField).value;
+            var phoneReg = /^\d{10}$/;
+            if (!phoneReg.test(phone)) {
+                alert('Please enter a valid zip code');
+                return false;
+            }
+            return true;
+        }
+
+        function validateState(stateField) {
+            var state = document.getElementById(stateField).value;
+            if (state.trim() === '') {
+                alert('Please enter State');
+                return false;
+            }
+            return true;
+        }
+
+        function validateZip(zipField) {
+            var zip = document.getElementById(zipField).value;
+            var zipReg = /^\d{5}$/;
+            if (!zipReg.test(zip)) {
+                alert('Please enter a valid ZIP code');
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Order Form</h2>
+        <form onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone"><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state"><br>
+
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip"><br>
+
+            <label for="payment">Payment Methods:</label>
+            <select id="payment" name="payment">
+                <option value="credit_card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank_transfer">Bank Transfer</option>
+            </select><br>
+
+            <input type="submit" value="Submit" onclick="submitForm()">
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="prodstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="prodjs.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>A R T S Y</h1>
+        <h2>ABSTRACT ART</h2>
+    </div>
+    <div class="navbar">
+        <div class="category">
+        <a href="painting.html" target="_self">Paintings</a>
+        <a href="dp.html" target="_self">Digital Prints</a>
+        <a href="abstract.html" target="_self">Abstract Art</a>
+        <a href="sculp.html" target="_self">Sculptures</a>
+    </div>
+        <a href="websitehp.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <a href="c.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i></a>
+        <a href="user.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+
+
+    </div>
+    </div>
+    </div>
+    <div class="filter-container">
+        <label>Filter by Price:</label>
+        <select id="priceFilter">
+            <option value="none">None</option>
+            <option value="0-999">Below ₹1000</option>
+            <option value="999-2000">₹999 - ₹2000</option>
+            <option value="2000-5000">₹2000 - ₹5000</option>
+            <option value="5000">₹5000 and above</option>
+        </select>
+    </div>
+    <div class="product-container">
+        <div class="product-card" id="product1" data-price="4750">
+            <img src="Images/Screenshot (174).png" alt="Product 1">
+            <h3>Horses </h3>
+            <p>Price: ₹4,750</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product1')">&#10084;</span>
+            <button class="cart-button">Add to Cart</button>
+
+        </div>
+        <div class="product-card ribbon" id="product2" data-price="2850">
+            <img src="Images/Screenshot (178).png" alt="Product 2">
+            <h3>Splash</h3>
+            <p>Price: ₹2,850</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product2')">&#10084;</span>
+            <button class="cart-button">Add to Cart</button>
+            <div class="corner-ribbon">Special Offer: 5% discount</div> <!-- Add corner ribbon here -->
+        </div>
+        <div class="product-card" id="product3" data-price="2300">
+            <img src="Images/ab3.jpg" alt="Product 3">
+            <h3>Multicolor canvas</h3>
+            <p>Price: ₹2,300</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product3')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product4" data-price="1900">
+            <img src="Images/Screenshot (177).png" alt="Product 1">
+            <h3>Bow and Arrow</h3>
+            <p>Price: ₹1,900</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product4')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product5" data-price="2600">
+            <img src="Images/ab5.jpg" alt="Product 2">
+            <h3>Focus</h3>
+            <p>Price: ₹2,600</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product5')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product6" data-price="2300">
+            <img src="Images/ab6.jpg" alt="Product 3">
+            <h3>Feathers</h3>
+            <p>Price: ₹899</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product6')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product7" data-price="1900">
+            <img src="Images/Screenshot (176).png" alt="Product 1">
+            <h3>Sage green geometry</h3>
+            <p>Price: ₹1,900</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product7')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product8" data-price="1699">
+            <img src="Images/Screenshot (175).png" alt="Product 2">
+            <h3>My Garden</h3>
+            <p>Price: ₹1,699</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product8')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product9" data-price="3300">
+            <img src="Images/Screenshot (179).png" alt="Product 3">
+            <h3>Monday Blues</h3>
+            <p>Price: ₹3,300</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product9')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product4" data-price="1900">
+            <img src="Images/Screenshot (177).png" alt="Product 1">
+            <h3>Bow and Arrow</h3>
+            <p>Price: ₹1,900</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product4')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product5" data-price="2600">
+            <img src="Images/ab5.jpg" alt="Product 2">
+            <h3>Focus</h3>
+            <p>Price: ₹2,600</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product5')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product6" data-price="2300">
+            <img src="Images/ab6.jpg" alt="Product 3">
+            <h3>Feathers</h3>
+            <p>Price: ₹899</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product6')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product7" data-price="1900">
+            <img src="Images/Screenshot (176).png" alt="Product 1">
+            <h3>Sage green geometry</h3>
+            <p>Price: ₹1,900</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product7')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product8" data-price="1699">
+            <img src="Images/Screenshot (175).png" alt="Product 2">
+            <h3>My Garden</h3>
+            <p>Price: ₹1,699</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product8')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        <p>&copy; 2023 ARTSY. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

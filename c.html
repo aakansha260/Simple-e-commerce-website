@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Cambria, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            background: #d5a4cf;
+            padding: 20px 0;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar {
+            background-color: #311b58;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .cart-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .cart-item img {
+            max-width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-details h3 {
+            margin: 0;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item-quantity input {
+            width: 40px;
+            text-align: center;
+        }
+
+        .cart-item-price {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .total-container {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .total-label {
+            font-weight: bold;
+        }
+
+        .total-amount {
+            font-size: 18px;
+        }
+
+        .remove-button {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-left: 20px;
+        }
+
+        .checkout-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 35px;
+            float: right;
+        }
+
+        .shop-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 35px;
+            float: left;
+        }
+
+        .save-for-later-button {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>A R T S Y</h1>
+        <h2>My Cart</h2>
+    </div>
+    <div class="navbar">
+        <a href="websitehp.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <a href="c.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i></a>
+        <a href="user.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+    </div>
+    <div class="cart-container">
+        <div class="cart-item">
+            <img src="Images/pg1.jpg" alt="Product 1">
+            <div class="cart-item-details">
+                <h3>Water lilies by Claude Monet</h3>
+                <p>Price:₹ 4,750 </p>
+            </div>
+            <div class="cart-item-quantity">
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" value="1" min="1">
+            </div>
+            <div class="cart-item-price">
+                ₹4750
+            </div>
+            <button class="remove-button" onclick="removeItem(this)"> Remove</button>
+            <button class="save-for-later-button" onclick="moveToSaveForLater(this)">Save for Later</button>
+        </div>
+        <!-- Add more cart items here -->
+
+        <div class="total-container">
+            <p class="total-label">Total Amount:</p>
+            <p class="total-amount">₹4750</p>
+        </div>
+        <button class="checkout-button" onclick="checkout()">Checkout</button>
+    </div>
+    </div>
+    <button class="shop-button" onclick="redirectToHomepage()">← Continue Shopping</button>
+    </div>
+    <script>
+        // Function to update the total amount
+        function updateTotal() {
+            let totalAmount = 0;
+            const cartItems = document.querySelectorAll('.cart-item');
+
+            cartItems.forEach((item) => {
+                const quantity = parseInt(item.querySelector('input').value);
+                const price = parseFloat(item.querySelector('.cart-item-price').textContent.replace('₹', ''));
+
+                totalAmount += quantity * price;
+            });
+
+            document.querySelector('.total-amount').textContent = '₹' + totalAmount.toFixed(2);
+        }
+
+        // Function to remove an item from the cart
+        function removeItem(button) {
+            const cartItem = button.parentElement;
+            cartItem.remove();
+            updateTotal();
+        }
+
+        // Function to handle the checkout button click
+        function checkout() {
+            window.location.href = 'orderform.html';
+        }
+        function redirectToHomepage() {
+            window.location.href = 'websitehp.html';
+        }
+
+        const quantityInputs = document.querySelectorAll('input[type="number"]');
+        quantityInputs.forEach((input) => {
+            input.addEventListener('input', updateTotal);
+        });
+
+
+        updateTotal();
+
+        function moveToSaveForLater(button) {
+            const cartItem = button.parentElement;
+            // Move the cart item to a "Save for Later" list (implement as needed)
+            // Example: savedForLaterItems.push(cartItem);
+            cartItem.remove();
+            updateTotal();
+        }
+    </script>
+</body>
+
+</html>

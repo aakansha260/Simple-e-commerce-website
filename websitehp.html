@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-container"> <!-- Container for logo and canvas -->
+            <canvas id="logoCanvas" width="90" height="90"></canvas>
+
+            <script>
+                // Get the canvas element and its context
+                var canvas = document.getElementById('logoCanvas');
+                var ctx = canvas.getContext('2d');
+
+                // Draw a circular background
+                ctx.beginPath();
+                ctx.arc(40, 40, 40, 0, 2 * Math.PI);
+                ctx.fillStyle = '#93528c';
+                ctx.fill();
+                ctx.closePath();
+
+                // Draw the letter "A" in the center
+                ctx.font = '50px Cambria';
+                ctx.fillStyle = '#ffffff';
+                ctx.textAlign = 'center';
+                ctx.fillText('A', 44, 60);
+            </script>
+        </div>
+        <img src="Images/prac.gif" alt="Logo">
+
+    </div>
+
+    <div class="navbar">
+        <div class="menu">
+            <button class="menubtn"><i class="fa fa-bars" aria-hidden="true"></i></button>
+            <div class="menu-content">
+                <a href="login.html" target="_self">LOGIN</a>
+                <a href="user.html">ACCOUNT</a>
+                <a href="c.html" target="_self">CART</a>
+                <a href="wishlist.html" target="_self">WISHLIST</a>
+            </div>
+        </div>
+        <a href="painting.html" target="_self">Paintings</a>
+        <a href="dp.html" target="_self">Digital Prints</a>
+        <a href="abstract.html" target="_self">Abstract Art</a>
+        <a href="sculp.html" target="_self">Sculptures</a>
+        <a href="#">Others</a>
+    </div>
+    <div class="search-bar">
+        <form method="get" action="" class="search-form">
+            <input type="text" placeholder="Search artworks, artists, styles..." required class="search-input">
+            <button type="submit" class="search-button">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+    <h1
+        style="text-align: center; text-shadow: 0px 1.9px 5px rgb(127, 122, 125); font-size: 35px; color: #333333;  margin-top: 10px;">
+        Discover the Art that you
+        Love</h1>
+    <div class="content">
+        <div class="img">
+            <a href="painting.html"><img src="Images/f1.jpg" alt="Artwork 1" class="hover-img"></a>
+            <h3>Vincent Van Gogh- Wheat Fields 1889</h3>
+            <a href="painting.html" target="_self" class="linkstyle">BUY THE BRUSHSTROKES OF CREATIVITY</a>
+        </div>
+        <div class="img">
+            <a href="dp.html"><img src="Images/f2.jpg" alt="Artwork 2" class="hover-img"></a>
+            <h3>Polka Dot Bloooms: Yayoi Kusama</h3>
+            <a href="dp.html" target="_self" class="linkstyle">INDULGE IN VISUAL STORIES AND COLORS</a>
+        </div>
+        <div class="img">
+            <a href="abstract.html"> <img src="Images/f3.jpg" alt="Artwork 3" class="hover-img"></a>
+            <h3>Threadwork: Women Redefining Fiber Art</h3>
+            <a href="abstract.html" target="_self" class="linkstyle">BROWSE THE CURATED COLLECTIONS</a>
+        </div>
+    </div>
+
+    <h1
+        style="text-align: center; text-shadow: 0px 1.9px 5px rgb(127, 122, 125); font-size: 35px; color: #333333;  margin-top: 20px;  margin-bottom: 2px; text-align: center;">
+        Curated Collections</h1>
+    <div class="content">
+        <div class="imgcc">
+            <img src="Images/cc1.jpg" alt="Artwork 3">
+            <h3 class="img-description">Minimalist Haven: Simple and Stylish</h3>
+            <a href="painting.html" target="_self" class="collection-link">Shop the Collection</a>
+        </div>
+        <div class="imgcc">
+            <img src="Images/cc2.jpg" alt="Artwork 3">
+            <h3 class="img-description">Nature's Palette: Landscapes and Seascapes</h3>
+            <a href="painting.html" target="_self" class="collection-link">Shop the Collection</a>
+        </div>
+    </div>
+
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="8"> <!-- Adjust scrollamount for scrolling speed -->
+            <span class="marquee-text">
+                End of Season Art Sale: Up to 40% Off on Trending Pieces! End of Season Art Sale: Up to 40% Off on
+                Trending Pieces! End of Season Art Sale: Up to 40% Off on Trending Pieces!
+            </span>
+        </marquee>
+    </div>
+    <div class="centered-container">
+        <div class="image-container">
+            <img src="Images/as1.jpg" alt="art">
+            <h3>Colorful Chaos</h3>
+            <p>Price: ₹1500</p>
+            <a href="Images/painting.html" target="_self">Shop Now</a>
+        </div>
+        <div class="image-container">
+            <img src="Images/as2.jpg" alt="art">
+            <h3>The Lady</h3>
+            <p>Price: ₹2200</p>
+            <a href="Images/painting.html" target="_self">Shop Now</a>
+        </div>
+        <div class="image-container">
+            <img src="Images/as3.jpg" alt="art">
+            <h3>At the Cafe</h3>
+            <p>Price: ₹2600</p>
+            <a href="painting.html" target="_self">Shop Now</a>
+        </div>
+        <div class="image-container">
+            <img src="Images/as4.jpg" alt="art">
+            <h3>Poppy Field</h3>
+            <p>Price: ₹1700</p>
+            <a href="painting.html" target="_self">Shop Now</a>
+        </div>
+        <div class="image-container">
+            <img src="Images/as5.jpg" alt="art">
+            <h3>Sculpture</h3>
+            <p>Price: ₹3900</p>
+            <a href="Images/painting.html" target="_self">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="rightcol">
+        <h2 style="text-align: center;">About Artsy</h2>
+        <p>Welcome to Artsy - a haven for art enthusiasts and creators alike. We are on a mission to connect you with
+            captivating art that stirs emotions, sparks creativity, and enriches lives. Our diverse collection showcases
+            a
+            world of artistic expression, offering something for every taste and style.</p>
+        <p>At Artsy, we value creativity, quality, and community. Our carefully curated selection reflects different
+            perspectives, cultures, and stories, fostering a sense of inclusivity and inspiration. Our dedicated team is
+            passionate about making your... <a href="about.html" target="_self" class="linkstyle">more</a></p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+        </div>
+    </div>
+
+    <h1
+        style="text-align: center; text-shadow: 0px 1.9px 5px rgb(127, 122, 125); font-size: 35px; color: #333333;  margin-top: 20px;  margin-bottom: 2px;">
+        More to Explore</h1>
+
+    <div class="blogimg">
+        <img src="Images/Screenshot (164).png" alt="Artwork 1">
+        <h3>Choose Timeless Home Art</h3>
+        <a href="https://www.vogue.com/article/how-to-buy-art-for-the-home" target="_blank" class="linkstyle">Read
+            Blog</a>
+    </div>
+    <div class="blogimg">
+        <img src="Images/Screenshot (165).png" alt="Artwork 2">
+        <h3>Buy the Perfect Artwork</h3>
+        <a href="https://www.housedigest.com/598052/15-easy-tips-for-choosing-the-perfect-artwork-for-your-home/"
+            target="_blank" class="linkstyle">Read Blog</a>
+    </div>
+    <div class="blogimg">
+        <img src="Images/bg.jpg" alt="Artwork 2">
+        <h3>Decorate Your Apartment</h3>
+        <a href="https://www.apartmentguide.com/blog/how-to-decorate-a-small-apartment/" target="_blank"
+            class="linkstyle">Read Blog</a>
+    </div>
+    <div class="digest-section">
+        <div class="digest-content">
+            <h2>ARTSY DIGEST</h2>
+            <p>Discover new art and collections added weekly by our curators.</p>
+        </div>
+        <div class="newsletter-section">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-message" id="newsletterMessage"></p>
+        </div>
+    </div>
+    <div>
+        <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+    </div>
+    <div class="sitemap">
+        <div class="category">
+            <h3 style="color:white ;">Art Category</h3>
+            <ul class="subpages">
+                <li><a href="painting.html" target="_self">Paintings</a></li>
+                <li><a href="dp.html">Digital Prints</a></li>
+                <li><a href="abstract.html">Abstract Art</a></li>
+                <li><a href="sculp.html">Sculptures</a></li>
+                <li><a href="#">Others</a></li>
+            </ul>
+        </div>
+        <div class="category">
+            <h3 style="color:white">Artists</h3>
+            <ul class="subpages">
+                <li><a href="#">Browse Artists</a></li>
+                <li><a href="#">Artist Profiles</a></li>
+                <li><a href="#">Search Artists</a></li>
+            </ul>
+        </div>
+        <div class="category">
+            <h3 style="color:white">For Sellers</h3>
+            <ul class="subpages">
+                <li><a href="#">Sell your art</a></li>
+                <li><a href="#">Seller FAQs</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h3 style="color:white">About</h3>
+            <ul class="subpages">
+                <li><a href="about.html">About Artsy</a></li>
+                <li><a href="#">The team</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h3 style="color:white">For Buyers</h3>
+            <ul class="subpages">
+                <li><a href="artist.html">Art Advisory Services</a></li>
+                <li><a href="artist-profile.html">Return Policy</a></li>
+                <li><a href="artist-profile.html">Buyer FAQ </a></li>
+                <li><a href="artist-profile.html"> Testimonials</a></li>
+                <li><a href="artist-profile.html">Curator's Circle </a></li>
+                <li><a href="artist-profile.html">Refer A Friend </a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023 ARTSY. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Function to scroll back to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show the back to top button when user scrolls down
+        window.addEventListener('scroll', function () {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.scrollY > 700) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+    </script>
+
+</html>

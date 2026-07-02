@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            font-family: Cambria;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            background: #d5a4cf;
+            padding: 20px 0;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar {
+            background-color: #311b58;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .container {
+            width: 90%;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .wishlist-item {
+            display: inline-block;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .wishlist-item img {
+            max-width: 300px;
+            max-height: 300px;
+            margin-right: 10px;
+        }
+
+        .wishlist-item-details {
+            flex: 1;
+        }
+
+        .wishlist-item-name {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .wishlist-item-price {
+            color: #52ad9c;
+            font-weight: bold;
+        }
+        .remove-button {
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .remove-button:hover {
+            background-color: #f44336;
+        }
+
+        .cartbutton {
+            background-color: #129d2e;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .cartbutton:hover {
+            background-color: #124918;
+        }
+
+        footer {
+            background-color: #d5a4cf;
+            text-align: center;
+            padding: 8px 0;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>A R T S Y</h1>
+        <h2>My Wishlist</h2>
+    </div>
+    <div class="navbar">
+        <a href="websitehp.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <a href="c.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i></a>
+        <a href="user.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+    </div>
+    <div class="container">
+        <!-- Wishlist items go here -->
+        <div class="wishlist-item-container">
+            <div class="wishlist-item" id="product1">
+                <img src="Images/dp2.jpg" alt="Product 1">
+                <div class="wishlist-item-details">
+                    <p class="wishlist-item-name">Gentle Reminders</p>
+                    <p class="wishlist-item-price">₹1,850</p>
+                </div>
+                <button class="cartbutton">Move to Cart</button>
+                <button class="remove-button" onclick="removeItem('product1')">Remove</button>
+            </div>
+
+            <div class="wishlist-item" id="product2">
+                <img src="Images/pg8.jpg" alt="Product 2">
+                <div class="wishlist-item-details">
+                    <p class="wishlist-item-name">Country side</p>
+                    <p class="wishlist-item-price">₹1,699</p>
+                </div>
+                <button class="cartbutton">Move to Cart</button>
+                <button class="remove-button" onclick="removeItem('product2')">Remove</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023 ARTSY. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript function to remove an item from the wishlist
+        function removeItem(productId) {
+            // Find the wishlist item by its ID
+            var itemToRemove = document.getElementById(productId);
+            
+            // Remove the item from the wishlist
+            if (itemToRemove) {
+                itemToRemove.remove();
+            }
+        }
+    </script>
+
+</html>

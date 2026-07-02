@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Cambria, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            background: #d5a4cf;
+            padding: 20px 0;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 900px;
+            display: flex;
+        }
+
+        .product-card img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-details {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .product-card h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .product-card p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        /* Style the "Add to Cart" button */
+        .product-card button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Style the button on hover */
+        .product-card button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1> A R T S Y</h1>
+    </div>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="Images/pg2.jpg" alt="Product 1">
+            <div class="product-details">
+                <h1>Sea scape</h1>
+                <p><b>Artist:</b> Remedios Varo</p>
+                <p><b>Description: </b>Immerse yourself in the captivating beauty of 'Seascape,' a breathtaking masterpiece that transports you to the tranquil shores of the sea. This stunning artwork captures the essence of the ocean's ever-changing moods with its mesmerizing blend of colors and intricate details</p>
+                <p><b>Origin:</b> Spain</p>
+                <p><b>Medium:</b> Painting, Acrylic on Canvas </p>
+                <p><b>Size:</b> 85 W x 110 H x 3 D cm</p>
+                <p><b>Availability:</b> In Stock</p>
+                <p><b>Price:</b> ₹2,850</p>
+                <button id="addToCartButton">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const addToCartButton = document.getElementById('addToCartButton');
+        let addedToCart = false;
+
+        addToCartButton.addEventListener('click', () => {
+            if (!addedToCart) {
+                // Perform the action to add the product to the cart here
+                // You can add your logic to store the product in the cart
+                // For now, let's simply change the button text
+                addToCartButton.textContent = 'Go to Cart';
+                addedToCart = true;
+            } else {
+                // Redirect the user to the cart page when the button reads "Go to Cart"
+                window.location.href = 'c.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

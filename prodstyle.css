@@ -1,0 +1,211 @@
+body {
+    font-family: Cambria;
+    background-color: #e4faf7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /*  background: linear-gradient(to right,red, pink,white);*/
+}
+
+.header {
+    text-align: center;
+    background: #d5a4cf;
+    padding: 20px 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #311b58;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.category {
+    display: flex;
+    margin-right: auto; /* Push other elements to the right */
+}
+
+.category a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    transition: 0.3s;
+}
+
+.category a:hover {
+    background-color: #7349af;
+}
+
+.category a:not(:last-child) {
+    margin-right: 20px; /* Add some space between category links */
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.navbar a i {
+    margin-right: 5px;
+}
+
+.navbar a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover:after {
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover {
+    background-color: #7349af;
+}
+
+.navbar a:hover i {
+    color: #7349af;
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    position: relative;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 14px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    /*  transition: box-shadow 0.3s ease;*/
+
+}
+
+
+.product-card img {
+    width: 300px;
+    height: 300px;
+    /*  border: 5px solid #ad72cd; Border effect */
+    /* border-radius: 5px;  Border radius effect */
+    /* transition: transform 0.3s ease;*/
+}
+
+/*.product-card img:hover {
+    transform: rotate(10deg);  }Rotation effect on hover */
+
+
+.product-card h3 {
+    margin-top: 10px;
+}
+
+
+.product-card p {
+    font-size: 18px;
+    color: #555;
+}
+
+.product-card button {
+    background-color: #3f1e50;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Cambria, sans-serif;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card button:hover {
+    background-color: #ad72cd;
+    /*box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);*/
+
+}
+
+.category{
+
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 22px;
+    float: left;
+}
+
+.favorite-heart {
+    color: gray;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.favorited {
+    color: red;
+}
+
+.filter-container {
+    margin: 10px;
+    text-align: left;
+}
+
+.filter-container label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filter-container select {
+    padding: 8px;
+    font-size: 16px;
+}
+.corner-ribbon {
+    width: 200px;
+    background-color: #ff9800;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    text-align: center;
+    transform: rotate(30deg);
+    padding: 10px 0;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust product card position for the ribbon */
+.product-card.ribbon {
+    margin-right: 10px;
+}
+
+/* Style the ribbon on hover */
+.product-card.ribbon:hover .corner-ribbon {
+    background-color: #f44336;
+}
+
+.footer {
+    background-color: #d5a4cf;
+    text-align: center;
+    padding: 30px;
+}

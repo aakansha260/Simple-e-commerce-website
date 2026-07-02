@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Cambria, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            background: #d5a4cf;
+            padding: 20px 0;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar {
+            background-color: #311b58;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 900px;
+            display: flex;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .product-card img {
+            max-width: 60%;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-card h1 {
+            margin: 0;
+        }
+
+        .product-card p {
+            margin-top: 10px;
+        }
+
+        .p {
+            font-size: large;
+        }
+
+        /* Style the "Add to Cart" button */
+        .product-card button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        /* Style the button on hover */
+        .product-card button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #d5a4cf;
+            text-align: center;
+            padding: 8px 0;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1> A R T S Y</h1>
+    </div>
+    <div class="navbar">
+        <a href="websitehp.html">Home</a>
+        <a href="c.html">Cart</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="painting.html">Product Page</a>
+    </div>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="Images/pg1.jpg" alt="Product 1">
+            <div class="product-details">
+                <h1>Water lilies by Claude Monet</h1>
+                <p><b>Artist:</b> Claude Monet</p>
+                <p><b>Description: </b>A famous Impressionist painting depicting a serene pond with floating
+                    water lilies. Monet's use of vibrant colors and light creates a tranquil atmosphere, making it an
+                    iconic artwork in art history.</p>
+                <p>United Kingdom</p>
+                <p>Painting, Oil on Canvas </p>
+                <p><b>Size:</b> 85 W x 110 H x 3 D cm</p>
+                Ships in a Box
+                <p><b>Price:</b> ₹4,750</p>
+                <p><b>Availability:</b> In Stock</p>
+                <button id="addToCartButton">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const addToCartButton = document.getElementById('addToCartButton');
+        let addedToCart = false;
+
+        addToCartButton.addEventListener('click', () => {
+            if (!addedToCart) {
+                // Perform the action to add the product to the cart here
+                // You can add your logic to store the product in the cart
+                // For now, let's simply change the button text
+                addToCartButton.textContent = 'Go to Cart';
+                addedToCart = true;
+            } else {
+                // Redirect the user to the cart page when the button reads "Go to Cart"
+                window.location.href = 'c.html';
+            }
+        });
+    </script>
+</body>
+<footer>
+    <div class="footer">
+        <p>&copy; 2023 ARTSY. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

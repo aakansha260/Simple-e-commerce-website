@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="prodstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="prodjs.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>A R T S Y</h1>
+        <h2>PAINTINGS</h2>
+    </div>
+    <div class="navbar">
+        <a href="websitehp.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <a href="c.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+        <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i></a>
+        <a href="user.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+    </div>
+    <div class="filter-container">
+        <label>Filter by Price:</label>
+        <select id="priceFilter">
+            <option value="none">None</option>
+            <option value="0-999">Below ₹1000</option>
+            <option value="999-2000">₹999 - ₹2000</option>
+            <option value="2000-5000">₹2000 - ₹5000</option>
+            <option value="5000">₹5000 and above</option>
+        </select>
+    </div>
+    <div class="product-container">
+        <div class="product-card" id="product1" data-price="4750">
+            <a href="prod.html"> <img src="Images/pg1.jpg" alt="Product 1"></a>
+            <h3>Water lilies by Claude Monet</h3>
+            <p>Price: ₹4,750</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product1')">&#10084;</span>
+            <button class="cart-button">Add to Cart</button>
+
+        </div>
+        <div class="product-card ribbon" id="product2" data-price="2850">
+            <a href="prod.html"> <img src="Images/pg2.jpg" alt="Product 1"></a>
+            <h3>Seascape</h3>
+            <p>Price: ₹2,850</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product2')">&#10084;</span>
+            <button class="cart-button">Add to Cart</button>
+            <div class="corner-ribbon">Special Offer: 5% discount</div> <!-- Add corner ribbon here -->
+        </div>
+        <div class="product-card" id="product3" data-price="2300">
+            <img src="Images/pg3.jpg" alt="Product 3">
+            <h3>Scenic Splendor</h3>
+            <p>Price: ₹2,300</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product3')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product4" data-price="1900">
+            <img src="Images/pg4.jpg" alt="Product 1">
+            <h3>Donna Con Ventaglio</h3>
+            <p>Price: ₹1,900</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product4')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product5" data-price="2600">
+            <img src="Images/pg5.jpg" alt="Product 2">
+            <h3>The lake</h3>
+            <p>Price: ₹2,600</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product5')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product6" data-price="2300">
+            <img src="Images/pg6.jpg" alt="Product 3">
+            <h3>Spring Bloom</h3>
+            <p>Price: ₹2,300</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product6')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product7" data-price="1900">
+            <img src="Images/pg7.jpg" alt="Product 1">
+            <h3>Sea green</h3>
+            <p>Price: ₹1,900</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product7')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product8" data-price="1699">
+            <img src="Images/pg8.jpg" alt="Product 2">
+            <h3>Country side</h3>
+            <p>Price: ₹1,699</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product8')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product9" data-price="3300">
+            <img src="Images/pg9.jpg" alt="Product 3">
+            <h3>Cafe terrace place</h3>
+            <p>Price: ₹3,300</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product9')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product10" data-price="4750">
+            <a href="prod.html"> <img src="Images/pg1.jpg" alt="Product 1"></a>
+            <h3>Water lilies by Claude Monet</h3>
+            <p>Price: ₹4,750</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product1')">&#10084;</span>
+            <button class="cart-button">Add to Cart</button>
+
+        </div>
+        <div class="product-card" id="product11" data-price="2850" >
+            <img src="Images/pg2.jpg" alt="Product 2"></a>
+            <h3>Seascape</h3>
+            <p>Price: ₹2,850</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product2')">&#10084;</span>
+            <button class="cart-button">Add to Cart</button>
+        </div>
+        <div class="product-card" id="product12" data-price="2300">
+            <img src="Images/pg3.jpg" alt="Product 3">
+            <h3>Scenic Splendor</h3>
+            <p>Price: ₹2,300</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product3')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product13" data-price="1900">
+            <img src="Images/pg4.jpg" alt="Product 1">
+            <h3>Donna Con Ventaglio</h3>
+            <p>Price: ₹1,900</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product4')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product14" data-price="2600">
+            <img src="Images/pg5.jpg" alt="Product 2">
+            <h3>The lake</h3>
+            <p>Price: ₹2,600</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product5')">&#10084;</span>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card" id="product15" data-price="4750">
+            <a href="prod.html"> <img src="Images/pg1.jpg" alt="Product 1"></a>
+            <h3>Water lilies by Claude Monet</h3>
+            <p>Price: ₹4,750</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product1')">&#10084;</span>
+            <button class="cart-button">Add to Cart</button>
+
+        </div>
+        <div class="product-card" id="product16" data-price="2850">
+            <img src="Images/pg2.jpg" alt="Product 2"></a>
+            <h3>Seascape</h3>
+            <p>Price: ₹2,850</p>
+            <span class="favorite-heart" onclick="toggleFavorite('product2')">&#10084;</span>
+            <button class="cart-button">Add to Cart</button>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        <p>&copy; 2023 ARTSY. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

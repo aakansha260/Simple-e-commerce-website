@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+    font-family: Cambria;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    background: #d5a4cf;
+    padding: 20px 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #311b58;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+    position: relative; /* Position relative for creating the underline effect */
+}
+
+.navbar a i {
+    margin-right: 5px;
+}
+
+.navbar a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover:after {
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+.account {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: 400px;
+            border-radius: 10px;
+        }
+
+        .profile img{
+            width: 20%;
+            border-radius: 70%;
+        }
+
+        .content h2 {
+            color: #311b58;
+        }
+
+        .logout {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    
+
+        .footer {
+            background-color: #d5a4cf;
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>A R T S Y</h1>
+            <h2>My Account</h2>
+        </div>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="websitehp.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <a href="c.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            <a href="user.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+        </div>
+
+        <!-- Account Content -->
+        <div class="account">
+            <section class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="user.html">Profile</a></li>
+                        <li><a href="#orders">Orders</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="#settings">Account Settings</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="content">
+                <div id="profile">
+                    <div class="profile">
+                    <img src="Images/profile.jpg" alt="profile">
+                </div>
+                    <h2>Profile Information</h2>
+                    <p><b>Name:</b> Priya Kapoor</p>
+                    <p><b>Email:</b> priya.kapoor@example.com</p>
+                    <p><b>Address:</b> 789 Jasmine Street,Goregaon-East, Mumbai, India</p>
+                    <p><b>Phone:</b> 9876543210</p>
+                </div>
+
+                <div id="orders">
+                    <h2>Order History</h2>
+                    <p>No orders yet.</p>
+                </div>
+
+                <div id="wishlist">
+                    <h2>Wishlist</h2>
+                    <p><a href="wishlist.html">Go to your Wishlist</a></p>
+                </div>
+
+                <div id="settings">
+                    <h2>Account Settings</h2>
+                    <p>Change your password, email, and other account settings here.</p>
+                </div>
+                <div id="logout">
+                    <h2>Log Out</h2>
+                    <p>Click the button below to log out of your account.</p>
+                    <button style="background-color: #531d72; color: #fff;padding: 10px 20px; cursor: pointer;border-radius: 5px;">Log Out</button>            
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2023 ARTSY. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript to handle logout functionality -->
+    <script>
+        document.getElementById('logout').addEventListener('click', function () {
+            // Perform logout actions here
+            alert('Logged out successfully!');
+            // Redirect to the login page
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,570 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: Cambria;
+}
+
+body {
+    font-family: Cambria;
+    background: #f0f0f0;
+}
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.1);
+}
+
+canvas {
+    border: 3px solid #9a75c2;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #93528c, #6b447a);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.header {
+    text-align: center;
+    background: #d5a4cf;
+    padding: 13px 0;
+    width: 100%;
+    height: 70%;
+
+}
+
+.header img {
+    max-width: 80%;
+    height: 50%;
+    margin-right: 3px;
+}
+
+
+.navbar {
+    overflow: hidden;
+    background-color: #d5a4cf;
+    text-align: center;
+}
+
+/*.topnav p {
+    font-size: 30px;
+    margin: 0;
+    color: white;
+}*/
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.menu {
+    float: left;
+    overflow: hidden;
+}
+
+.menubtn {
+    font-size: 26px;
+    font-family: Cambria;
+    border: none;
+    outline: invert;
+    color: white;
+    background-color: #d5a4cf;
+    margin: 10px 10px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 6;
+    margin-right: 100px;
+
+}
+
+.menu-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 19px;
+}
+
+.menu-content a:hover {
+    background-color: rgb(232, 220, 237);
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
+
+/* Add this to your existing CSS or style.css file */
+.search-bar {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.search-bar:hover {
+    background-color: #f7f7f7;
+    /* Change background color on hover */
+}
+
+.search-bar form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.search-bar input[type="text"] {
+    width: 700px;
+    height: 40px;
+    font-size: 18px;
+    padding: 5px 20px;
+    /* Increased padding for better visibility */
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #a6a1ae48;
+}
+
+.search-bar input[type="text"]:focus {
+    width: 400px;
+    /* Expand input field on focus */
+}
+
+.search-bar button {
+    background-color: #784a83;
+    color: #ffffff;
+    border: none;
+    padding: 2px 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: Cambria;
+    border-radius: 40px;
+    margin-left: 10px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-bar button:hover {
+    background-color: #c278b5;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.img {
+    display: inline-block;
+    border: 1.8px solid #e7d404;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 420px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+.img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.img h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.img a {
+    text-decoration: none;
+    color:  #93528c;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.img a:hover {
+    color: #ff7575;
+    text-decoration: none;
+}
+
+.imgcc {
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+    background-color: #f0f0f0;
+
+}
+
+.imgcc img {
+    max-width: 100%;
+    /* Ensures the image does not overflow its container */
+    height: auto;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.img-description {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.collection-link {
+    text-decoration: none;
+    color: #93528c;
+    /* Match the color of your logo */
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.collection-link:hover {
+    color: #ff7575;
+    /* Change color on hover */
+}
+
+.marquee {
+    background-color: #0474c9;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.marquee marquee {
+    font-size: 25px;
+    animation: infinite;
+
+}
+
+.marquee-text {
+    display: inline-block;
+    /* padding-right: 40px;*/
+}
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px;
+    /* Adjust margin for spacing between items */
+}
+
+.image-container {
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #e7d404;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s;
+    width: 250px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    /* Increase the size of the container on hover */
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    /* Add a subtle box shadow on hover */
+}
+
+.image-container h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.image-container p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.image-container a {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #e7d404;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.image-container a:hover {
+    background-color: #fff;
+    color: #e7d404;
+}
+
+.blogimg {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    /*background-color: rgb(255, 255, 255);*/
+}
+
+.blogimg img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    height: 300px;
+}
+
+.linkstyle {
+    font-size: 20px;
+    font-weight: bold;
+    /*color: rgb(4, 4, 4);*/
+
+}
+
+.rightcol {
+    background-color: #f7edb3a9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    float: right;
+    margin-left: 5px;
+    margin-right: 12px;
+    margin-top: 60px;
+}
+
+.rightcol h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.rightcol p {
+    font-size: 1rem;
+    color: #464141;
+    margin-bottom: 25px;
+}
+
+
+.linkstyle {
+    color: #93528c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linkstyle:hover {
+    text-decoration:  none;
+    color: #ff7575;
+}
+
+.fa {
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.fa:hover {
+    opacity: 0.8;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #930860;
+    color: white;
+}
+
+.social-links a {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+.digest-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid rgb(147, 141, 141);
+   /* border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+   */ margin-top: 20px;
+}
+
+.digest-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.digest-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.newsletter-section {
+    flex: 1;
+    text-align: center;
+}
+
+.newsletter-form input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+}
+
+.newsletter-form button {
+    width: 20%;
+    background-color:  #663962;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.newsletter-form button:hover {
+    background-color: #000000;
+}
+
+.newsletter-message {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+.sitemap {
+    background-color: #d5a4cf;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sitemap ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sitemap li {
+    margin-bottom: 5px;
+}
+
+.sitemap a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sitemap a:hover {
+    color: #910351;
+}
+
+.category {
+    flex-basis: 100%;
+}
+
+.category-heading {
+    font-size: 30px;
+    color: #d34b96;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subpages {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #44145b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
+.footer {
+    background-color: #d5a4cf;
+    text-align: center;
+    padding: 30px;
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0;
+    font-weight: bold;
+}
